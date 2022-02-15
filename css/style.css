@@ -121,6 +121,7 @@ img{
 .site-nav .link:focus,
 .site-nav .link:hover {
   color: var(--accent-color);
+  transition: color 250ms ;
 }
 .site-nav .link.current {
   color: var(--accent-color);
@@ -155,16 +156,15 @@ img{
   align-items: center;
  
 }
-
+.auth-nav .contact:hover,
 .auth-nav .contact:focus {
   color: var(--accent-color);
-}
-.auth-nav .contact:hover {
-  color: var(--accent-color);
+  transition: color 250ms;
 }
 .auth-nav .contact:hover .contact-icon,
 .auth-nav .contact:focus .contact-icon{
   fill: var(--accent-color);
+  transition: fill 250ms;
 }
 .auth-nav .email{
   width: 16px;
@@ -208,8 +208,8 @@ img{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(47, 48, 58, 0.8);
 }
 /* ---------------------Window------------------ */
@@ -231,12 +231,20 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 border-radius: 4px;
 }
 .close {
- width: 0;
- height: 0;
- border: 0;
- padding: 0;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+justify-content: center;
+align-items: center;
+border: 0;
+padding: 0;
+
 }
-.icon-close{
+/* .icon-close{
   cursor: pointer;
   position: absolute;
   width: 30px;
@@ -245,7 +253,7 @@ border-radius: 4px;
   right: 14px;
   top: 14px;
   background-color: var(--primeri-bg-color);
-}
+} */
 /* Секцыи */
 /* feature */
 .feature{
@@ -413,12 +421,14 @@ margin: 16px 32px 30px 32px;
 .team .link:hover,
 .team .link:focus{
 background-color: var(--accent-color);
-fill: #ECECEC;
+transition: fill 250ms;
+transition: background-color 250ms;
 }
 
 .team .link:hover .icon,
 .team .link:focus .icon{
 fill: var(--primeri-bg-color);
+transition: fill 250ms;
 }
 /*-------------customers---------*/
 .customers{
@@ -460,10 +470,12 @@ border-radius: 4px;
 .customers .bg:hover,
 .customers .bg:focus{
   border-color: var(--accent-color);
+  transition: border-color 250ms;
 }
 .customers .bg:hover .icon,
 .customers .bg:focus .icon{
   fill: var(--accent-color);
+  transition: fill 250ms;
 }
 /* footer */
 .footer {
@@ -501,11 +513,10 @@ margin-top: 9px;
   font-style: normal;
   letter-spacing: 0.03em;
 }
-.footer .contact:focus {
-  color: var(--accent-color);
-}
+.footer .contact:focus,
 .footer .contact:hover {
   color: var(--accent-color);
+  transition: color 250ms;
 }
 /* social-network */
 .social-network{
@@ -549,6 +560,7 @@ margin-bottom: 20px;
 .footer .social-network .link:hover,
 .footer .social-network .link:focus{
   background-color: var(--accent-color);
+  transition: background-color 250ms;
 }
 
 /*         PORFOLIO           */
@@ -586,6 +598,8 @@ padding-bottom: 94px;
 .primeri-nav .button:focus {
   color: var(--primeri-bg-color);
   background-color: var(--accent-color);
+   transition: background-color 250ms;
+   transition: color 250ms;
 }
 /* menu */
 .menu{
@@ -607,8 +621,10 @@ margin-bottom: 30px;
   top: 0;
   left: 0;
   color: var(--primeri-bg-color);
-  font-size: 18px;
-line-height: calc(28px / 18px);
+ font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: calc(28 /18);
 letter-spacing: 0.03em;
 padding: 63px 24px;
 background: rgba(33, 150, 243, 0.9);
